@@ -438,7 +438,7 @@ def calculate_confidence_intervals(df, metrics):
         # Calculate the 95% confidence interval
         ci_low = avg - 1.96 * sem
         ci_high = avg + 1.96 * sem
-        results.append([met, f"{avg:.2f} ({ci_low:.2f}, {ci_high:.2f})"])
+        results.append([met, f"{avg:.2f} ({ci_low:.2f}-{ci_high:.2f})"])
     
     return pd.DataFrame(results, columns=['metric', 'value'])
 
